@@ -80,6 +80,7 @@ public class Main {
                         System.out.println("ID sách không hợp lệ.");
                     }
                     break;
+                    
                 case 4:
                     // Xóa sách
                     System.out.print("\nNhập ID sách muốn xóa: ");
