@@ -21,7 +21,9 @@ public class Main {
             System.out.println("1. Hiển thị danh sách sách");
             System.out.println("2. Mượn sách");
             System.out.println("3. Trả sách");
-            System.out.println("4. Thoát");
+            System.out.println("4. Xóa sách");
+            System.out.println("5. Tìm sách theo tên");
+            System.out.println("6. Thoát");
             System.out.print("Chọn chức năng: ");
             int choice = scanner.nextInt();
 
@@ -78,8 +80,42 @@ public class Main {
                         System.out.println("ID sách không hợp lệ.");
                     }
                     break;
-
                 case 4:
+                    // Xóa sách
+                    System.out.print("\nNhập ID sách muốn xóa: ");
+                    int removeId = scanner.nextInt();
+                    boolean foundRemove = false;
+                    for (Main_Books book : books) {
+                        if (book.getId() == removeId) {
+                            foundRemove = true;
+                            books.remove(book);
+                            System.out.println("Xóa sách thành công.");
+                            break;
+                        }
+                    }
+                    if (!foundRemove) {
+                        System.out.println("ID sách không hợp lệ.");
+                    }
+                    break;
+
+                case 5:
+                    // Tìm sách theo tên
+                    System.out.print("\nNhập tên sách cần tìm: ");
+                    String searchTitle = scanner.nextLine();
+                    boolean foundSearch = false;
+                    System.out.println("\nKết quả tìm kiếm:");
+                    for (Main_Books book : books) {
+                        if (book.getTitle().toLowerCase().contains(searchTitle.toLowerCase())) {
+                            System.out.println(book);
+                            foundSearch = true;
+                        }
+                    }
+                    if (!foundSearch) {
+                        System.out.println("Không tìm thấy sách nào.");
+                    }
+                    break;
+
+                case 6:
                     // Thoát chương trình
                     running = false;
                     System.out.println("Thoát chương trình.");
