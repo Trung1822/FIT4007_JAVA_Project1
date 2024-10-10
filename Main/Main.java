@@ -1,5 +1,6 @@
 package FIT4007_JAVA_OOP.Main;
 
+import FIT4007_JAVA_OOP.Reader.ReaderManagement;
 import Main_Books.Main_Books;
 
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        ReaderManagement rm = new ReaderManagement();
         // Tạo một số đối tượng Book
         Main_Books b01 = new Main_Books(1, "Book1", "A1", 3);
         Main_Books b02 = new Main_Books(2, "Book2", "A2", 5);
@@ -28,6 +30,7 @@ public class Main {
             int choice = scanner.nextInt();
 
             switch (choice) {
+
                 case 1:
                     // Hiển thị danh sách sách
                     System.out.println("\nDanh sách sách:");
@@ -80,7 +83,7 @@ public class Main {
                         System.out.println("ID sách không hợp lệ.");
                     }
                     break;
-                    
+
                 case 4:
                     // Xóa sách
                     System.out.print("\nNhập ID sách muốn xóa: ");
@@ -117,24 +120,22 @@ public class Main {
                     break;
 
                 case 6:
-                    // Thoát chương trình
-                    running = false;
-                    System.out.println("Thoát chương trình.");
+                    rm.AddReader();
                     break;
-
+                case 7:
+                    rm.ReadFile();
+                    break;
+                case 8:
+                    rm.WriteFile();
+                    break;
+                case 0:
+                    System.out.println("Ket thuc chuong trinh!");
+                    break;
                 default:
-                    System.out.println("Lựa chọn không hợp lệ. Vui lòng thử lại.");
-                    break;
-
-
-
-                case 5:
-                    // 
+                    System.out.println("Lua chon khong hop le!");
             }
-        }
 
-        scanner.close();
+
+        }
     }
 }
-
-
