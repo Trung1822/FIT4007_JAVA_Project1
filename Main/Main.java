@@ -1,13 +1,13 @@
-package FIT4007_JAVA_OOP.Main;
+package Main;
 
-import FIT4007_JAVA_OOP.Reader.ReaderManagement;
+import Reader.ReaderManagement;
 import Main_Books.Main_Books;
 
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static  void main(String[] args) {
         ReaderManagement rm = new ReaderManagement();
         // Tạo một số đối tượng Book
         Main_Books b01 = new Main_Books(1, "Book1", "A1", 3);
