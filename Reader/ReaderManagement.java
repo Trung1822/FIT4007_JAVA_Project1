@@ -1,4 +1,4 @@
-package FIT4007_JAVA_OOP.Reader;
+package Reader;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
