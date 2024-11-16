@@ -1,4 +1,4 @@
-package FIT4007_JAVA_OOP.Loan;
+package Loan;
 
 import java.util.Date;
 

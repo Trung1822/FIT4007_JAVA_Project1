@@ -1,7 +1,6 @@
-package FIT4007_JAVA_OOP.Reader;
+package Reader;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -61,4 +60,15 @@ public class ReaderManagement {
         }
 
     }
+    public void showAllReaders() {
+        if (ReaderList.isEmpty()) {
+            System.out.println("No readers in the list.");
+        } else {
+            System.out.println("List of Readers:");
+            for (Reader reader : ReaderList) {
+                System.out.println(reader);
+            }
+        }
+    }
+
 }

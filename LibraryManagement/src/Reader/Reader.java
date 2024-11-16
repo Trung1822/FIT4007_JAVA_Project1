@@ -1,4 +1,4 @@
-package FIT4007_JAVA_OOP.Reader;
+package Reader;
 import java.util.Scanner;
 import java.io.Serializable;
 
@@ -8,7 +8,6 @@ public class Reader implements Serializable {
     private String reader_Name;
     private String reader_Email;
     private String reader_Address;
-
 
 
     public Reader( String reader_ID, String reader_Name, String reader_Email, String reader_Address) {
