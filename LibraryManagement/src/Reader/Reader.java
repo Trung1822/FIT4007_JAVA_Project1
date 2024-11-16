@@ -11,10 +11,10 @@ public class Reader implements Serializable {
 
 
     public Reader( String reader_ID, String reader_Name, String reader_Email, String reader_Address) {
-    this.reader_ID = reader_ID;
-    this.reader_Name = reader_Name;
-    this.reader_Email = reader_Email;
-    this.reader_Address = reader_Address;
+        this.reader_ID = reader_ID;
+        this.reader_Name = reader_Name;
+        this.reader_Email = reader_Email;
+        this.reader_Address = reader_Address;
     }
     public String getReader_ID() {
         return reader_ID;
